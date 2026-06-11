@@ -2,7 +2,7 @@ name: CMS
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'src/**'
       - 'pom.xml'
