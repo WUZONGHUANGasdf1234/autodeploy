@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping("/auto")
     public String testAutoDeploy(){
-        return "部署成功";
+        return "部署成功了，呜呜";
     }
 }
