@@ -50,6 +50,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- MyBatis Plus Spring Boot 3 启动器 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <version>3.5.15</version> <!-- 与第二个项目版本保持一致 -->
+        </dependency>
+
+        <!-- MyBatis Plus SQL 解析器（可选但推荐） -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-jsqlparser</artifactId>
+            <version>3.5.12</version>
+        </dependency>
+
     </dependencies>
 
     <build>
