@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.guet.autodeploy.mapper.NewsMapper">
+
+    <!-- 结果映射（仅保留新闻核心字段） -->
+    <resultMap id="NewsMap" type="cn.edu.guet.autodeploy.entity.News">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="category" column="category"/>
+        <result property="content" column="content"/>
+    </resultMap>
+
+    <!-- 查询新闻总数 -->
+    <select id="newsCount" resultType="int">
+        SELECT COUNT(*) FROM news
+    </select>
+
+    <!-- 分页查询全部新闻 -->
+    <select id="newsList" resultMap="NewsMap">
+        SELECT * FROM news LIMIT #{start}, #{rows}
+    </select>
+
+</mapper>
